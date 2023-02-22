@@ -15,7 +15,7 @@ public class FirstRoadMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var target = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+        var target = new Vector3(transform.position.x, transform.position.y - 0.01f, transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, target, _movementSpeed);
         if (transform.localPosition.y <= -22.93f)
         {
