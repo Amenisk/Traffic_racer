@@ -8,12 +8,16 @@ public class CarMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale == 0.0f)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(transform.position.x > -2.77f)
@@ -33,8 +37,4 @@ public class CarMove : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
-    }
 }
